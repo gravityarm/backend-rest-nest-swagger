@@ -26,12 +26,70 @@ async function main() {
       name: 'Prisma Mongo',
       content:
         'Our engineers have been working hard, issuing new releases with many improvements...',
-      category: 'Quote',
+      category: 'Task',
+      archive: false,
+    },
+  });
+
+  const note3 = await prisma.note.upsert({
+    where: { name: 'Facebook' },
+    update: {},
+    create: {
+      name: 'Facebook',
+      content:
+        'Our engineers have been working hard, issuing new releases with many improvements...',
+      category: 'Idea',
+      archive: false,
+    },
+  });
+
+  const note4 = await prisma.note.upsert({
+    where: { name: 'Twitter' },
+    update: {},
+    create: {
+      name: 'Twitter',
+      content:
+        'Our engineers have been working hard, issuing new releases with many improvements...',
+      category: 'Idea',
       archive: true,
     },
   });
 
-  console.log({ note1, note2 });
+  const note5 = await prisma.note.upsert({
+    where: { name: 'Foo' },
+    update: {},
+    create: {
+      name: 'Foo',
+      content:
+        'Our engineers have been working hard, issuing new releases with many improvements...',
+      category: 'Task',
+      archive: false,
+    },
+  });
+
+  const note6 = await prisma.note.upsert({
+    where: { name: 'Bar' },
+    update: {},
+    create: {
+      name: 'Bar',
+      content:
+        'Our engineers have been working hard, issuing new releases with many improvements...',
+      category: 'Quote',
+      archive: false,
+    },
+  });
+
+  const note7 = await prisma.note.upsert({
+    where: { name: 'Baz' },
+    update: {},
+    create: {
+      name: 'Baz',
+      content:
+        'Our engineers have been working hard, issuing new releases with many improvements...',
+      category: 'Random Thought',
+      archive: true,
+    },
+  });
 }
 
 // execute the main function
