@@ -13,6 +13,11 @@ docker-compose up -d
 
 npx prisma migrate dev
 
+
+# Seed data
+
+npx prisma db seed
+
 # Start the project 
 
 npm run start:dev
