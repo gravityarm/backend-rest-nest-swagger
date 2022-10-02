@@ -73,5 +73,6 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "postinstall": "npx prisma generate && ts-node prisma/seed.ts && npm run build"
 }
