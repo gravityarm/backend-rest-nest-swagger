@@ -24,3 +24,8 @@ npm run start:dev
 
 # Swagger
 Access the project  at http://localhost:3000/api
+
+
+# Heroku Api
+
+https://notes-nest-rest-api.herokuapp.com/api
