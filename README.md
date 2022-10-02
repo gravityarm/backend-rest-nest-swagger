@@ -16,7 +16,7 @@ npx prisma migrate dev
 
 # Seed data
 
-npx prisma db seed
+ts-node prisma/seed.ts
 
 # Start the project 
 
